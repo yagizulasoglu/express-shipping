@@ -5,9 +5,9 @@
   "description": "Shipment for an item",
   "type": "object",
   "properties": {
-    "productId": {
-      "type": "integer",
-      "minimum": 1000
+    "productIds": {
+      "type": "array",
+      "items": [{"type": "integer"}]
     },
     "name": {
       "type": "string"
@@ -19,7 +19,7 @@
   },
   "additionalProperties": false,
   "required": [
-    "productId",
+    "productIds",
     "name",
     "addr",
     "zip"
